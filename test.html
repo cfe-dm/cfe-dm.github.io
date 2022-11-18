@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+<script>
+$(document).ready(function(){
+ $("form").submit(function(){
+   var response = grecaptcha.getResponse();
+      if(response.length == 0){
+          alert('Please check the Captcha');
+    return false;
+ } 
+ });
+});
+</script>
+ <script type="text/javascript">
+ var onloadCallback = function() {
+ grecaptcha.render('html_element', {
+ 'sitekey' : '6LcowRUjAAAAAKskEYVcI5bYalisgtqPRcPO2Meq'
+ });
+ };
+ </script>
+</head>
+<body>
+<h3>Click to download the file</h3>
+   <form action="https://forms.office.com/pages/responsepage.aspx?id=ft0a9LFXyUqefBS-jb9ICYGzCbMrijNJls5LmVvf9JpUMVVDUkhOTkFKNVZSOThLMVBNV0wzVkFCQS4u" method="post">
+   <div id="html_element"></div>
+       <br>
+       <input type="submit" value="Download">
+   </form> 
+ <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+ async defer>
+ </script>
+</body>
+</html>

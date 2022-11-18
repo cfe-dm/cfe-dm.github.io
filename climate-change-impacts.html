@@ -21,27 +21,25 @@
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
     
     
-    <script>
-        $(document).ready(function(){
-         $("form").submit(function(){
-           var response = grecaptcha.getResponse();
-              if(response.length == 0){
-                  alert('Please check the Captcha');
-            return false;
-         } 
-         });
-        });
-    </script>
-    
-        <script type="text/javascript">
-        var onloadCallback = function() {
-        grecaptcha.render('html_element', {
-        'sitekey' : '6LcowRUjAAAAAKskEYVcI5bYalisgtqPRcPO2Meq'
-        });
-        };
-       </script>
-    
-    
+
+       <script>
+$(document).ready(function(){
+ $("form").submit(function(){
+   var response = grecaptcha.getResponse();
+      if(response.length == 0){
+          alert('Please check the Captcha');
+    return false;
+ } 
+ });
+});
+</script>
+ <script type="text/javascript">
+ var onloadCallback = function() {
+ grecaptcha.render('html_element', {
+ 'sitekey' : '6LcowRUjAAAAAKskEYVcI5bYalisgtqPRcPO2Meq'
+ });
+ };
+ </script>
     
 
 
